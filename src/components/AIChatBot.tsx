@@ -32,7 +32,7 @@ export const AIChatBot: React.FC<AIChatBotProps> = ({
     {
       id: 'welcome-1',
       sender: 'bot',
-      text: `Namaste! 🙏 I am **JanBot**, your IBM Bob-powered Citizen Services Assistant.\n\nAsk me anything about government schemes in simple language. E.g. *"I need a loan for small tea shop"* or *"Free hospital coverage for parents"*!`,
+      text: `Namaste! 🙏 I am **JanBot**, your Citizen Services AI Assistant.\n\nAsk me anything about government schemes in simple language. E.g. *"I need a loan for small tea shop"* or *"Free hospital coverage for parents"*!`,
       timestamp: 'Just now',
       suggestedAction: {
         type: 'open_checker'

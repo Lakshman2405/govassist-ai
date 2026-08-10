@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useAuth } from '../context/AuthContext';
 import { LANGUAGES } from '../data/translations';
 import { 
   Globe, 
@@ -12,6 +13,7 @@ import {
   Sparkles,
   GitCompare,
   ShieldCheck,
+  Lock,
   Menu,
   X
 } from 'lucide-react';
@@ -25,6 +27,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenChatbot }) => {
   const { lang, setLang, t, savedSchemeIds } = useLanguage();
+  const { user, setIsAuthModalOpen } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -42,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo & IBM Alignment */}
+          {/* Brand Logo */}
           <div 
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => setActiveTab('discover')}
@@ -58,11 +61,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
                   {t('appTitle')}
                 </span>
                 <span className="bg-amber-400/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-400/30 uppercase tracking-wide">
-                  IBM Bob AI
+                  Citizen Copilot
                 </span>
               </div>
               <p className="text-xs text-slate-400 hidden sm:block">
-                SkillUp x IBM SkillsBuild Governance Platform
+                National Governance & Citizen Services Platform
               </p>
             </div>
           </div>
@@ -94,11 +97,25 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
             })}
           </nav>
 
-          {/* Right Actions: Language Switcher & Chatbot */}
-          <div className="flex items-center gap-3">
+          {/* Right Actions: Language Switcher, Citizen Auth & Chatbot */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Citizen Auth Button */}
+            <button
+              onClick={() => setIsAuthModalOpen(true)}
+              className={`p-2 sm:px-3 sm:py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 border ${
+                user
+                  ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/50'
+                  : 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
+              }`}
+              title={user ? `Signed in as ${user.name}` : 'Citizen Secure Sign In'}
+            >
+              {user ? <ShieldCheck className="w-4 h-4 text-emerald-400" /> : <Lock className="w-4 h-4 text-amber-400" />}
+              <span className="hidden sm:inline">{user ? user.name.split(' ')[0] : 'Sign In'}</span>
+            </button>
+
             {/* Multilingual Selector */}
-            <div className="relative flex items-center bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs">
-              <Globe className="w-4 h-4 text-indigo-400 mr-1.5" />
+            <div className="relative flex items-center bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 rounded-xl px-2 py-1.5 text-xs">
+              <Globe className="w-4 h-4 text-indigo-400 mr-1" />
               <select
                 value={lang}
                 onChange={(e) => setLang(e.target.value as LanguageCode)}
@@ -115,7 +132,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
             {/* Floating AI Chatbot Button */}
             <button
               onClick={onOpenChatbot}
-              className="bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-amber-500/20 flex items-center gap-2 hover:scale-105 active:scale-95 transition-all"
+              className="bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-bold text-xs px-3.5 py-2.5 rounded-xl shadow-lg shadow-amber-500/20 flex items-center gap-2 hover:scale-105 active:scale-95 transition-all"
             >
               <Bot className="w-4 h-4" />
               <span className="hidden sm:inline">Ask AI JanBot</span>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
+import { AuthProvider } from './context/AuthContext';
 import { AccessibilityBar } from './components/AccessibilityBar';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
@@ -12,6 +13,7 @@ import { DocumentChecklist } from './components/DocumentChecklist';
 import { SavedSchemes } from './components/SavedSchemes';
 import { CSCLocator } from './components/CSCLocator';
 import { AIChatBot } from './components/AIChatBot';
+import { AuthModal } from './components/AuthModal';
 import { Footer } from './components/Footer';
 import { SCHEMES_DATA } from './data/schemesData';
 import type { CategoryType, Scheme } from './types';
@@ -158,6 +160,9 @@ const MainApp: React.FC = () => {
         onOpenChecker={() => setActiveTab('checker')}
       />
 
+      {/* Citizen Authentication & Profile Modal */}
+      <AuthModal />
+
       {/* Footer */}
       <Footer />
 
@@ -167,9 +172,11 @@ const MainApp: React.FC = () => {
 
 export function App() {
   return (
-    <LanguageProvider>
-      <MainApp />
-    </LanguageProvider>
+    <AuthProvider>
+      <LanguageProvider>
+        <MainApp />
+      </LanguageProvider>
+    </AuthProvider>
   );
 }
 

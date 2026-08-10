@@ -47,7 +47,7 @@ export const PolicySimplifier: React.FC = () => {
       <div className="text-center max-w-3xl mx-auto space-y-2">
         <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/30 text-amber-300 text-xs px-3 py-1 rounded-full font-bold">
           <Sparkles className="w-4 h-4 text-amber-400" />
-          <span>IBM Bob Jargon Simplifier</span>
+          <span>AI Policy Gazette Jargon Simplifier</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-black text-white">{t('simplifierTitle')}</h2>
         <p className="text-slate-300 text-sm">{t('simplifierSubtitle')}</p>

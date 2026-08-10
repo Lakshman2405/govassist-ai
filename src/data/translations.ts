@@ -14,8 +14,8 @@ export const LANGUAGES: LanguageOption[] = [
 export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
   en: {
     appTitle: 'JanSeva AI',
-    appSubtitle: 'IBM Bob-Powered Citizen Services & Welfare Discovery Assistant',
-    badgeText: 'SkillUp x IBM SkillsBuild Governance Project',
+    appSubtitle: 'Enterprise Citizen Services & Welfare Discovery Platform',
+    badgeText: 'National Governance & Social Impact AI',
     navHome: 'Home',
     navDiscover: 'Scheme Discovery',
     navChecker: 'Eligibility Checker',
@@ -82,7 +82,7 @@ export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     trackPlaceholder: 'Enter Reference Number e.g. JS-2026-89412',
     btnTrack: 'Track Status',
 
-    chatHeaderTitle: 'JanBot — IBM Bob Citizen Assistant',
+    chatHeaderTitle: 'JanBot — Citizen AI Assistant',
     chatHeaderSubtitle: 'Online 24/7 | Speaks 8 Languages',
     chatPlaceholder: 'Ask anything about government schemes in simple language...',
     
@@ -90,12 +90,12 @@ export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     accessFont: 'Font Size',
     accessSpeech: 'Audio Voice Output',
     
-    disclaimer: 'JanSeva AI is an educational citizen services assistant created under the SkillUp & IBM SkillsBuild initiative to empower citizens with accessible welfare discovery.'
+    disclaimer: 'JanSeva AI is an enterprise citizen services platform empowering citizens with accessible, transparent welfare discovery and direct benefit access.'
   },
   hi: {
     appTitle: 'जनसेवा AI',
-    appSubtitle: 'आईबीएम बॉब संचालित नागरिक सेवा और कल्याणकारी योजना सहायक',
-    badgeText: 'SkillUp x IBM SkillsBuild सुशासन परियोजना',
+    appSubtitle: 'नागरिक सेवा और कल्याणकारी योजना मंच',
+    badgeText: 'राष्ट्रीय सुशासन एवं सामाजिक प्रभाव मंच',
     navHome: 'मुख्य पृष्ठ',
     navDiscover: 'योजना खोजें',
     navChecker: 'पात्रता जांचें',
@@ -162,7 +162,7 @@ export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     trackPlaceholder: 'संदर्भ संख्या दर्ज करें जैसे JS-2026-89412',
     btnTrack: 'स्थिति देखें',
 
-    chatHeaderTitle: 'जनबॉट — आईबीएम बॉब नागरिक सहायक',
+    chatHeaderTitle: 'जनबॉट — नागरिक एआई सहायक',
     chatHeaderSubtitle: '24/7 ऑनलाइन | 8 भाषाओं में उपलब्ध',
     chatPlaceholder: 'सरकारी योजनाओं के बारे में आसान भाषा में कुछ भी पूछें...',
 
@@ -170,12 +170,12 @@ export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
     accessFont: 'अक्षर आकार',
     accessSpeech: 'ऑडियो आवाज output',
 
-    disclaimer: 'जनसेवा AI नागरिकों को कल्याणकारी योजनाओं से सशक्त बनाने के लिए SkillUp और IBM SkillsBuild पहल के तहत विकसित एक सहायक प्लेटफ़ॉर्म है।'
+    disclaimer: 'जनसेवा AI नागरिकों को कल्याणकारी योजनाओं से सशक्त बनाने के लिए विकसित एक स्वतंत्र सहायक प्लेटफ़ॉर्म है।'
   },
   ta: {
     appTitle: 'ஜன்சேவா AI',
-    appSubtitle: 'IBM Bob-ஆல் இயக்கப்படும் குடிமக்கள் சேவை மற்றும் நலத்திட்ட உதவியாளர்',
-    badgeText: 'SkillUp x IBM SkillsBuild ஆளுமை திட்டம்',
+    appSubtitle: 'குடிமக்கள் சேவை மற்றும் நலத்திட்ட தளம்',
+    badgeText: 'தேசிய ஆளுமை திட்டம்',
     navHome: 'முகப்பு',
     navDiscover: 'திட்டங்கள் கண்டறிக',
     navChecker: 'தகுதி பரிசோதனை',
@@ -242,8 +242,8 @@ export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
   },
   te: {
     appTitle: 'జన్‌సేవ AI',
-    appSubtitle: 'IBM Bob ఆధారిత పౌర సేవలు మరియు సంక్షేమ పథకాల సహాయకుడు',
-    badgeText: 'SkillUp x IBM SkillsBuild ప్రాజెక్ట్',
+    appSubtitle: 'పౌర సేవలు మరియు సంక్షేమ పథకాల వేదిక',
+    badgeText: 'జాతీయ పరిపాలన వేదిక',
     navHome: 'హోమ్',
     navDiscover: 'పథకాలు',
     navChecker: 'అర్హత తనిఖీ',
@@ -310,8 +310,8 @@ export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
   },
   mr: {
     appTitle: 'जनसेवा AI',
-    appSubtitle: 'IBM Bob संचलित नागरिक सेवा आणि कल्याणकारी योजना सहाय्यक',
-    badgeText: 'SkillUp x IBM SkillsBuild प्रकल्प',
+    appSubtitle: 'नागरिक सेवा आणि कल्याणकारी योजना मंच',
+    badgeText: 'राष्ट्रीय सुशासन मंच',
     navHome: 'मुख्य पृष्ठ',
     navDiscover: 'योजना शोधा',
     navChecker: 'पात्रता तपासा',
@@ -378,8 +378,8 @@ export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
   },
   bn: {
     appTitle: 'জনসেবা AI',
-    appSubtitle: 'IBM Bob চালিত নাগরিক পরিষেবা ও জনকল্যাণমূলক প্রকল্প সহকারী',
-    badgeText: 'SkillUp x IBM SkillsBuild উদ্যোগ',
+    appSubtitle: 'নাগরিক পরিষেবা ও জনকল্যাণমূলক প্রকল্প মঞ্চ',
+    badgeText: 'জাতীয় সুশাসন উদ্যোগ',
     navHome: 'হোম',
     navDiscover: 'প্রকল্প খুঁজুন',
     navChecker: 'যোগ্যতা পরীক্ষা',
@@ -446,8 +446,8 @@ export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
   },
   gu: {
     appTitle: 'જનસેવા AI',
-    appSubtitle: 'IBM Bob સંચાલિત નાગરિક સેવાઓ અને સબસિડી સહાયક',
-    badgeText: 'SkillUp x IBM SkillsBuild પ્રોજેક્ટ',
+    appSubtitle: 'નાગરિક સેવાઓ અને સબસિડી મંચ',
+    badgeText: 'રાષ્ટ્રીય સુશાસન મંચ',
     navHome: 'મુખ્ય પૃષ્ઠ',
     navDiscover: 'યોજનાઓ શોધો',
     navChecker: 'પાત્રતા ચકાસો',
@@ -514,8 +514,8 @@ export const UI_TRANSLATIONS: Record<LanguageCode, Record<string, string>> = {
   },
   kn: {
     appTitle: 'ಜನಸೇವಾ AI',
-    appSubtitle: 'IBM Bob ನಡೆಸಲ್ಪಡುವ ನಾಗರಿಕ ಸೇವೆಗಳು ಮತ್ತು ಕಲ್ಯಾಣ ಯೋಜನೆಗಳ ಸಹಾಯಕ',
-    badgeText: 'SkillUp x IBM SkillsBuild ಯೋಜನೆ',
+    appSubtitle: 'ನಾಗರಿಕ ಸೇವೆಗಳು ಮತ್ತು ಕಲ್ಯಾಣ ಯೋಜನೆಗಳ ವೇದಿಕೆ',
+    badgeText: 'ರಾಷ್ಟ್ರೀಯ ಆಡಳಿತ ಯೋಜನೆ',
     navHome: 'ಮುಖ್ಯ ಪುಟ',
     navDiscover: 'ಯೋಜನೆಗಳನ್ನು ಹುಡುಕಿ',
     navChecker: 'ಅರ್ಹತೆ ಪರೀಕ್ಷೆ',
