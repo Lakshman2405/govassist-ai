@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import { LANGUAGES } from '../data/translations';
@@ -13,6 +13,7 @@ import {
   Sparkles,
   GitCompare,
   ShieldCheck,
+  Smartphone,
   Lock,
   Menu,
   X
@@ -29,6 +30,26 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
   const { lang, setLang, t, savedSchemeIds } = useLanguage();
   const { user, setIsAuthModalOpen } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+
+  useEffect(() => {
+    const handleBeforeInstall = (e: Event) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+    window.addEventListener('beforeinstallprompt', handleBeforeInstall);
+    return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
+  }, []);
+
+  const handleInstallPwa = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') setDeferredPrompt(null);
+    } else {
+      alert('To install JanSeva AI on mobile:\n\n1. Tap the 3 dots (⋮) in the top-right corner of Chrome.\n2. Select "Add to Home screen" or "Install app".');
+    }
+  };
 
   const navItems = [
     { id: 'discover', label: t('navDiscover'), icon: Search },
@@ -97,8 +118,19 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
             })}
           </nav>
 
-          {/* Right Actions: Language Switcher, Citizen Auth & Chatbot */}
+          {/* Right Actions: Install App, Language, Auth & Chatbot */}
           <div className="flex items-center gap-2 sm:gap-3">
+            
+            {/* Direct Install App Button */}
+            <button
+              onClick={handleInstallPwa}
+              className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs px-3 py-2 rounded-xl shadow flex items-center gap-1.5 hover:scale-105 active:scale-95 transition-all"
+              title="Install Mobile App"
+            >
+              <Smartphone className="w-4 h-4" />
+              <span className="hidden sm:inline">Install App</span>
+            </button>
+
             {/* Citizen Auth Button */}
             <button
               onClick={() => setIsAuthModalOpen(true)}
@@ -179,6 +211,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
               </button>
             );
           })}
+
+          <button
+            onClick={handleInstallPwa}
+            className="w-full bg-amber-400 text-slate-950 font-extrabold text-sm py-3 rounded-xl shadow flex items-center justify-center gap-2 mt-4"
+          >
+            <Smartphone className="w-5 h-5" />
+            <span>Install JanSeva AI App</span>
+          </button>
         </div>
       )}
     </header>
