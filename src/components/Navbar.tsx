@@ -14,6 +14,7 @@ import {
   GitCompare,
   ShieldCheck,
   Smartphone,
+  Download,
   Lock,
   Menu,
   X
@@ -49,6 +50,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
     } else {
       alert('To install JanSeva AI on mobile:\n\n1. Tap the 3 dots (⋮) in the top-right corner of Chrome.\n2. Select "Add to Home screen" or "Install app".');
     }
+  };
+
+  const handleDownloadApk = () => {
+    const apkUrl = '/JanSevaAI.apk';
+    window.open(apkUrl, '_blank');
   };
 
   const navItems = [
@@ -118,14 +124,24 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
             })}
           </nav>
 
-          {/* Right Actions: Install App, Language, Auth & Chatbot */}
+          {/* Right Actions: APK Download, Install App, Language, Auth & Chatbot */}
           <div className="flex items-center gap-2 sm:gap-3">
             
-            {/* Direct Install App Button */}
+            {/* Download APK Button */}
+            <button
+              onClick={handleDownloadApk}
+              className="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs px-3 py-2 rounded-xl shadow flex items-center gap-1.5 hover:scale-105 active:scale-95 transition-all"
+              title="Download Native Android APK"
+            >
+              <Download className="w-4 h-4 text-emerald-200" />
+              <span className="hidden sm:inline">Download APK</span>
+            </button>
+
+            {/* Install App Button */}
             <button
               onClick={handleInstallPwa}
               className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs px-3 py-2 rounded-xl shadow flex items-center gap-1.5 hover:scale-105 active:scale-95 transition-all"
-              title="Install Mobile App"
+              title="Install Mobile Web App"
             >
               <Smartphone className="w-4 h-4" />
               <span className="hidden sm:inline">Install App</span>
@@ -212,13 +228,23 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
             );
           })}
 
-          <button
-            onClick={handleInstallPwa}
-            className="w-full bg-amber-400 text-slate-950 font-extrabold text-sm py-3 rounded-xl shadow flex items-center justify-center gap-2 mt-4"
-          >
-            <Smartphone className="w-5 h-5" />
-            <span>Install JanSeva AI App</span>
-          </button>
+          <div className="grid grid-cols-2 gap-2 pt-2">
+            <button
+              onClick={handleDownloadApk}
+              className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs py-3 rounded-xl shadow flex items-center justify-center gap-1.5"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download APK</span>
+            </button>
+
+            <button
+              onClick={handleInstallPwa}
+              className="w-full bg-amber-400 text-slate-950 font-extrabold text-xs py-3 rounded-xl shadow flex items-center justify-center gap-1.5"
+            >
+              <Smartphone className="w-4 h-4" />
+              <span>Install App</span>
+            </button>
+          </div>
         </div>
       )}
     </header>
