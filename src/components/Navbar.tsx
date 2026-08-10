@@ -58,7 +58,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
                   {t('appTitle')}
                 </span>
                 <span className="bg-amber-400/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-400/30 uppercase tracking-wide">
-                  v2.0 Enterprise
+                  IBM Bob AI
                 </span>
               </div>
               <p className="text-xs text-slate-400 hidden sm:block">

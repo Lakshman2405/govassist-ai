@@ -1,8 +1,8 @@
-# JanSeva AI (GovAssist AI) v2.0 Enterprise 🏛️✨
+# JanSeva AI (GovAssist AI) 🏛️✨
 > **IBM Bob-Powered Citizen Services Assistant & Multilingual Welfare Discovery Platform**  
 > *Developed for SkillUp in Collaboration with IBM SkillsBuild — AI for Governance & Citizen Services Track*
 
-![JanSeva AI Banner](https://img.shields.io/badge/IBM_SkillsBuild-SkillUp_Governance_v2.0-4f46e5?style=for-the-badge&logo=ibm)
+![JanSeva AI Banner](https://img.shields.io/badge/IBM_SkillsBuild-SkillUp_Governance-4f46e5?style=for-the-badge&logo=ibm)
 ![License](https://img.shields.io/badge/License-MIT-emerald?style=for-the-badge)
 ![Schemes](https://img.shields.io/badge/Schemes-50%2B_Welfare_Programs-rose?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/Languages-8_Regional_Languages-amber?style=for-the-badge)
@@ -14,7 +14,7 @@
 
 Many citizens across rural and urban communities remain unaware of government welfare schemes and public entitlements available to them, or find official gazette notifications and eligibility criteria overly complex to understand. 
 
-**JanSeva AI v2.0 Enterprise** scales public service delivery into an industry-grade governance platform that:
+**JanSeva AI** serves as an industry-grade governance platform that:
 1. **Explains 50+ government schemes in simple 5th-grade language** across 8 major sectors.
 2. **Features an interactive Scheme Comparison Matrix** allowing citizens to compare up to 3 schemes side-by-side.
 3. **Provides an AI Eligibility Gap Analyzer** with actionable roadmaps to fulfill missing criteria.
@@ -24,7 +24,7 @@ Many citizens across rural and urban communities remain unaware of government we
 
 ---
 
-## 🌟 Key v2.0 Features
+## 🌟 Key Platform Features
 
 ### 1. 📚 50+ Comprehensive Government Schemes Knowledgebase
 Covers 8 critical socio-economic sectors:
@@ -87,7 +87,6 @@ Select any 2 or 3 schemes side-by-side to evaluate:
 ```bash
 git clone https://github.com/Lakshman2405/govassist-ai.git
 cd govassist-ai
-git checkout v2.0-enterprise
 ```
 
 ### 2. Install Dependencies
