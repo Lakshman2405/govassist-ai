@@ -16,7 +16,8 @@
 
 | Provider | Live Cloud URL | Status |
 | :--- | :--- | :--- |
-| 🚀 **Netlify Production Cloud** | **[https://capable-faloodeh-5f8062.netlify.app](https://capable-faloodeh-5f8062.netlify.app)** | 🟢 Active Live |
+| 🚀 **Netlify Production Cloud** | **[https://elegant-horse-fb85de.netlify.app/](https://elegant-horse-fb85de.netlify.app/)** | 🟢 Active Live |
+| 🔺 **Vercel Production Cloud** | **[https://janseva-mwtd6y9gd-lakshman2405s-projects.vercel.app/](https://janseva-mwtd6y9gd-lakshman2405s-projects.vercel.app/)** | 🟢 Active Live |
 | ⚡ **GitHub Pages Cloud CDN** | **[https://Lakshman2405.github.io/govassist-ai/](https://Lakshman2405.github.io/govassist-ai/)** | 🟢 Active Live |
 | 📂 **GitHub Repository** | **[https://github.com/Lakshman2405/govassist-ai](https://github.com/Lakshman2405/govassist-ai)** | 🟢 Main Branch |
 
