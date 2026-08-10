@@ -7,13 +7,55 @@ import {
   ArrowRight
 } from 'lucide-react';
 
+export const INDIAN_STATES_AND_UTS = [
+  // 28 States
+  'Andhra Pradesh',
+  'Arunachal Pradesh',
+  'Assam',
+  'Bihar',
+  'Chhattisgarh',
+  'Goa',
+  'Gujarat',
+  'Haryana',
+  'Himachal Pradesh',
+  'Jharkhand',
+  'Karnataka',
+  'Kerala',
+  'Madhya Pradesh',
+  'Maharashtra',
+  'Manipur',
+  'Meghalaya',
+  'Mizoram',
+  'Nagaland',
+  'Odisha',
+  'Punjab',
+  'Rajasthan',
+  'Sikkim',
+  'Tamil Nadu',
+  'Telangana',
+  'Tripura',
+  'Uttar Pradesh',
+  'Uttarakhand',
+  'West Bengal',
+
+  // 8 Union Territories
+  'Andaman and Nicobar Islands',
+  'Chandigarh',
+  'Dadra and Nagar Haveli and Daman and Diu',
+  'Delhi (NCT)',
+  'Jammu and Kashmir',
+  'Ladakh',
+  'Lakshadweep',
+  'Puducherry'
+].sort();
+
 export const AuthModal: React.FC = () => {
   const { isAuthModalOpen, setIsAuthModalOpen, login, register, user, logout } = useAuth();
   const [mode, setMode] = useState<'login' | 'register'>('login');
   const [mobile, setMobile] = useState('');
   const [pin, setPin] = useState('');
   const [name, setName] = useState('');
-  const [state, setState] = useState('Delhi');
+  const [state, setState] = useState('Delhi (NCT)');
   const [role, setRole] = useState<'Citizen' | 'CSC Operator'>('Citizen');
 
   if (!isAuthModalOpen) return null;
@@ -156,18 +198,16 @@ export const AuthModal: React.FC = () => {
                 <div className="grid grid-cols-2 gap-2">
                   <div>
                     <label className="block text-xs font-bold text-slate-300 uppercase mb-1">
-                      State / UT
+                      State / UT (36 Regions)
                     </label>
                     <select
                       value={state}
                       onChange={(e) => setState(e.target.value)}
                       className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-white text-xs focus:border-indigo-500 focus:outline-none"
                     >
-                      <option value="Delhi">Delhi</option>
-                      <option value="Maharashtra">Maharashtra</option>
-                      <option value="Tamil Nadu">Tamil Nadu</option>
-                      <option value="Telangana">Telangana</option>
-                      <option value="Uttar Pradesh">Uttar Pradesh</option>
+                      {INDIAN_STATES_AND_UTS.map((s) => (
+                        <option key={s} value={s}>{s}</option>
+                      ))}
                     </select>
                   </div>
 

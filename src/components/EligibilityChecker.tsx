@@ -11,6 +11,8 @@ import {
 } from 'lucide-react';
 import { SchemeCard } from './SchemeCard';
 
+import { INDIAN_STATES_AND_UTS } from './AuthModal';
+
 interface EligibilityCheckerProps {
   onSelectScheme: (scheme: Scheme) => void;
 }
@@ -21,7 +23,7 @@ export const EligibilityChecker: React.FC<EligibilityCheckerProps> = ({ onSelect
   const [profile, setProfile] = useState<UserProfile>({
     age: 35,
     gender: 'Male',
-    state: 'Delhi',
+    state: 'Delhi (NCT)',
     areaType: 'Rural',
     category: 'General',
     annualIncome: 120000,
@@ -40,11 +42,7 @@ export const EligibilityChecker: React.FC<EligibilityCheckerProps> = ({ onSelect
     setResults(matchedResults);
   };
 
-  const statesList = [
-    'All', 'Andhra Pradesh', 'Assam', 'Bihar', 'Delhi', 'Gujarat', 'Haryana', 
-    'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Punjab', 
-    'Rajasthan', 'Tamil Nadu', 'Telangana', 'Uttar Pradesh', 'West Bengal'
-  ];
+  const statesList = ['All', ...INDIAN_STATES_AND_UTS];
 
   const totalCalculatedBenefits = results 
     ? results.filter(r => r.matchScore >= 60).reduce((acc, curr) => acc + curr.calculatedBenefitValue, 0)
