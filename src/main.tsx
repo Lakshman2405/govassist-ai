@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.tsx'
 
 // Register Progressive Web App Service Worker
-if ('serviceWorker' in navigator && import.meta.env.PROD) {
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js').then(
       (registration) => {
