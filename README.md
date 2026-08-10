@@ -3,11 +3,22 @@
 > *A Production-Grade Open-Source Governance Copilot Empowering 1.4 Billion Citizens*
 
 ![JanSeva AI Banner](https://img.shields.io/badge/Platform-JanSeva_AI-indigo?style=for-the-badge&logo=react)
+![Netlify Status](https://img.shields.io/badge/Deploy-Netlify_Live-00C7B7?style=for-the-badge&logo=netlify)
+![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub_Pages-222222?style=for-the-badge&logo=github)
 ![License](https://img.shields.io/badge/License-MIT-emerald?style=for-the-badge)
 ![Schemes](https://img.shields.io/badge/Schemes-50%2B_Verified_Programs-rose?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/Languages-8_Regional_Languages-amber?style=for-the-badge)
 ![Security](https://img.shields.io/badge/Security-AES_Encrypted_Client_Data-blue?style=for-the-badge)
-![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub_Actions_Passing-success?style=for-the-badge)
+
+---
+
+## 🌐 Live Production Cloud Deployment Links
+
+| Provider | Live Cloud URL | Status |
+| :--- | :--- | :--- |
+| 🚀 **Netlify Production Cloud** | **[https://capable-faloodeh-5f8062.netlify.app](https://capable-faloodeh-5f8062.netlify.app)** | 🟢 Active Live |
+| ⚡ **GitHub Pages Cloud CDN** | **[https://Lakshman2405.github.io/govassist-ai/](https://Lakshman2405.github.io/govassist-ai/)** | 🟢 Active Live |
+| 📂 **GitHub Repository** | **[https://github.com/Lakshman2405/govassist-ai](https://github.com/Lakshman2405/govassist-ai)** | 🟢 Main Branch |
 
 ---
 
