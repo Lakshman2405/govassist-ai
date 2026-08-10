@@ -6,7 +6,9 @@ import { HeroSection } from './components/HeroSection';
 import { SchemeCard } from './components/SchemeCard';
 import { SchemeDetailModal } from './components/SchemeDetailModal';
 import { EligibilityChecker } from './components/EligibilityChecker';
+import { SchemeComparer } from './components/SchemeComparer';
 import { PolicySimplifier } from './components/PolicySimplifier';
+import { DocumentChecklist } from './components/DocumentChecklist';
 import { SavedSchemes } from './components/SavedSchemes';
 import { CSCLocator } from './components/CSCLocator';
 import { AIChatBot } from './components/AIChatBot';
@@ -73,12 +75,20 @@ const MainApp: React.FC = () => {
                   </p>
                 </div>
 
-                <button
-                  onClick={() => setActiveTab('checker')}
-                  className="hidden sm:inline-flex bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow"
-                >
-                  Run Eligibility Wizard →
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setActiveTab('compare')}
+                    className="hidden sm:inline-flex bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs px-4 py-2.5 rounded-xl border border-slate-700 shadow"
+                  >
+                    Compare Schemes ⚖️
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('checker')}
+                    className="hidden sm:inline-flex bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow"
+                  >
+                    Run Eligibility Wizard →
+                  </button>
+                </div>
               </div>
 
               {filteredSchemes.length > 0 ? (
@@ -113,8 +123,16 @@ const MainApp: React.FC = () => {
           <EligibilityChecker onSelectScheme={setSelectedScheme} />
         )}
 
+        {activeTab === 'compare' && (
+          <SchemeComparer onSelectScheme={setSelectedScheme} />
+        )}
+
         {activeTab === 'simplifier' && (
           <PolicySimplifier />
+        )}
+
+        {activeTab === 'checklist' && (
+          <DocumentChecklist />
         )}
 
         {activeTab === 'csc' && (

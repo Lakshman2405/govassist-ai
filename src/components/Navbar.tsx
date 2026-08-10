@@ -10,6 +10,8 @@ import {
   FileText, 
   MapPin, 
   Sparkles,
+  GitCompare,
+  ShieldCheck,
   Menu,
   X
 } from 'lucide-react';
@@ -28,7 +30,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
   const navItems = [
     { id: 'discover', label: t('navDiscover'), icon: Search },
     { id: 'checker', label: t('navChecker'), icon: CheckCircle2 },
+    { id: 'compare', label: 'Scheme Comparer', icon: GitCompare },
     { id: 'simplifier', label: t('navSimplifier'), icon: FileText },
+    { id: 'checklist', label: 'Document Readiness', icon: ShieldCheck },
     { id: 'csc', label: t('navCSC'), icon: MapPin },
     { id: 'bookmarks', label: t('navBookmarks'), icon: Bookmark, badge: savedSchemeIds.length }
   ];
@@ -54,11 +58,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
                   {t('appTitle')}
                 </span>
                 <span className="bg-amber-400/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-400/30 uppercase tracking-wide">
-                  IBM Bob AI
+                  v2.0 Enterprise
                 </span>
               </div>
               <p className="text-xs text-slate-400 hidden sm:block">
-                SkillUp x IBM SkillsBuild Governance Assistant
+                SkillUp x IBM SkillsBuild Governance Platform
               </p>
             </div>
           </div>
@@ -72,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
                 <button
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
-                  className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold transition-all relative ${
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold transition-all relative ${
                     isActive
                       ? 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-md shadow-indigo-500/25'
                       : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
