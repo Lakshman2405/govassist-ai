@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Scheme } from '../types';
 import { useLanguage } from '../context/LanguageContext';
+import { WhatsAppShareButton } from './WhatsAppShareButton';
 import { 
   Volume2, 
   Bookmark, 
@@ -49,6 +50,9 @@ export const SchemeCard: React.FC<SchemeCardProps> = ({ scheme, onSelect, matchS
           </div>
 
           <div className="flex items-center gap-1">
+            {/* WhatsApp Share Button */}
+            <WhatsAppShareButton scheme={scheme} />
+
             {/* Audio Read-Aloud Button */}
             <button
               onClick={handleAudioRead}

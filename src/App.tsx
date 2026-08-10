@@ -14,6 +14,7 @@ import { SavedSchemes } from './components/SavedSchemes';
 import { CSCLocator } from './components/CSCLocator';
 import { AIChatBot } from './components/AIChatBot';
 import { AuthModal } from './components/AuthModal';
+import { InstallPwaBanner } from './components/InstallPwaBanner';
 import { Footer } from './components/Footer';
 import { SCHEMES_DATA } from './data/schemesData';
 import type { CategoryType, Scheme } from './types';
@@ -45,6 +46,9 @@ const MainApp: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-amber-400 selection:text-slate-950">
       
+      {/* PWA Install Banner */}
+      <InstallPwaBanner />
+
       {/* Top Accessibility Bar */}
       <AccessibilityBar />
 
