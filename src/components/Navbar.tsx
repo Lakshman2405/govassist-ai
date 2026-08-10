@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import { LANGUAGES } from '../data/translations';
-import { 
-  Globe, 
-  Bookmark, 
-  Bot, 
-  CheckCircle2, 
-  Search, 
-  FileText, 
-  MapPin, 
+import {
+  Globe,
+  Bookmark,
+  Bot,
+  CheckCircle2,
+  Search,
+  FileText,
+  MapPin,
   Sparkles,
   GitCompare,
   ShieldCheck,
@@ -65,9 +65,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
     <header className="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 text-white shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          
+
           {/* Brand Logo */}
-          <div 
+          <div
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => setActiveTab('discover')}
           >
@@ -100,11 +100,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
                 <button
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
-                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold transition-all relative ${
-                    isActive
-                      ? 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-md shadow-indigo-500/25'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
-                  }`}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold transition-all relative ${isActive
+                    ? 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-md shadow-indigo-500/25'
+                    : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                    }`}
                 >
                   <Icon className={`w-4 h-4 ${isActive ? 'text-amber-300' : 'text-slate-400'}`} />
                   <span>{item.label}</span>
@@ -120,7 +119,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
 
           {/* Right Actions: Install App, Language, Auth & Chatbot */}
           <div className="flex items-center gap-2 sm:gap-3">
-            
+
             {/* Install App Button */}
             <button
               onClick={handleInstallPwa}
@@ -134,11 +133,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
             {/* Citizen Auth Button */}
             <button
               onClick={() => setIsAuthModalOpen(true)}
-              className={`p-2 sm:px-3 sm:py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 border ${
-                user
-                  ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/50'
-                  : 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
-              }`}
+              className={`p-2 sm:px-3 sm:py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 border ${user
+                ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/50'
+                : 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
+                }`}
               title={user ? `Signed in as ${user.name}` : 'Citizen Secure Sign In'}
             >
               {user ? <ShieldCheck className="w-4 h-4 text-emerald-400" /> : <Lock className="w-4 h-4 text-amber-400" />}
@@ -195,9 +193,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenC
                   setActiveTab(item.id);
                   setMobileMenuOpen(false);
                 }}
-                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold ${
-                  isActive ? 'bg-indigo-600 text-white' : 'text-slate-300 bg-slate-800/50'
-                }`}
+                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold ${isActive ? 'bg-indigo-600 text-white' : 'text-slate-300 bg-slate-800/50'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <Icon className="w-5 h-5 text-amber-300" />
