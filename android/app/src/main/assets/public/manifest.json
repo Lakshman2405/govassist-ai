@@ -1,0 +1,34 @@
+{
+  "short_name": "JanSeva AI",
+  "name": "JanSeva AI — National Citizen Services & Welfare Discovery Platform",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#020617",
+  "theme_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "portrait",
+  "description": "Discover government welfare schemes, calculate financial benefits, and get simple language eligibility guidance offline.",
+  "categories": ["government", "productivity", "utilities"]
+}
