@@ -19,7 +19,7 @@
 | 🏆 **Primary Production (Vercel)** | **[https://govassist-ai-chi.vercel.app/](https://govassist-ai-chi.vercel.app/)** | 🟢 Active Production |
 | 🚀 **Secondary Cloud (Netlify)** | **[https://elegant-horse-fb85de.netlify.app/](https://elegant-horse-fb85de.netlify.app/)** | 🟢 Active Live |
 | ⚡ **GitHub Pages Cloud CDN** | **[https://Lakshman2405.github.io/govassist-ai/](https://Lakshman2405.github.io/govassist-ai/)** | 🟢 Active Live |
-| ⚡ **Azure Statuc Web App** | **[https://purple-wave-070bdf300.5.azurestaticapps.net/](https://purple-wave-070bdf300.5.azurestaticapps.net/)** | 🟢 Active Live |
+| ⚡ **Azure Static Web App** | **[https://purple-wave-070bdf300.5.azurestaticapps.net/](https://purple-wave-070bdf300.5.azurestaticapps.net/)** | 🟢 Active Live |
 | 📂 **GitHub Repository** | **[https://github.com/Lakshman2405/govassist-ai](https://github.com/Lakshman2405/govassist-ai)** | 🟢 Main Branch |
 
 ---
